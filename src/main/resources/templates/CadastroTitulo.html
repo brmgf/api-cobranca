@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Cadastro de Título</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-light bg-light">
+  	<div class="container-fluid">
+    	<span class="navbar-brand mb-0 h1">Cobrança de Títulos</span>
+  	</div>
+	</nav>
+	
+	<form class="formulario">
+	<h4 class="titulo">Novo título</h4>
+  	<div class="row mb-3">
+    	<label for="inputDesc" class="col-sm-1 col-form-label">Descrição</label>
+    	<div class="col-sm-5">
+      		<input type="text" class="form-control" id="inputDesc">
+    	</div>
+  	</div>
+  	
+  	<div class="row mb-3">
+    	<label for="inputVenc" class="col-sm-1 col-form-label">Vencimento</label>
+    	<div class="col-sm-2">
+      		<input type="text" class="form-control" id="inputVenc">
+    	</div>
+  	</div>
+ 
+ 	<div class="row mb-3">
+    	<label for="inputValor" class="col-sm-1 col-form-label">Valor</label>
+    	<div class="col-sm-2">
+      		<input type="text" class="form-control" id="inputValor">
+    	</div>
+  	</div>
+  	
+  	<div class="row mb-3">
+    	<label for="inputValor" class="col-sm-1 col-form-label">Status</label>
+    	<div class="col-sm-2">
+      		<select class="form-control">
+      		<option>Pendente</option>
+      		<option>Recebido</option>
+      		</select>
+    	</div>
+  	</div>
+  	
+  	<button type="submit" class="btn btn-primary">Salvar</button>
+  	
+	</form>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

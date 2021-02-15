@@ -1,0 +1,10 @@
+.formulario {
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid darkgrey;
+	border-radius: 15px;
+}
+
+.titulo {
+	margin-bottom: 35px;
+}
