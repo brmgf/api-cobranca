@@ -14,35 +14,37 @@
   	</div>
 	</nav>
 	
-	<form class="formulario">
+	<form class="formulario" method="POST" action="/titulos">
+	
 	<h4 class="titulo">Novo título</h4>
+	
   	<div class="row mb-3">
     	<label for="inputDesc" class="col-sm-1 col-form-label">Descrição</label>
     	<div class="col-sm-5">
-      		<input type="text" class="form-control" id="inputDesc">
+      		<input type="text" class="form-control" id="descricao" name="descricao">
     	</div>
   	</div>
   	
   	<div class="row mb-3">
     	<label for="inputVenc" class="col-sm-1 col-form-label">Vencimento</label>
     	<div class="col-sm-2">
-      		<input type="text" class="form-control" id="inputVenc">
+      		<input type="text" class="form-control" id="dataVencimento" name="dataVencimento">
     	</div>
   	</div>
  
  	<div class="row mb-3">
     	<label for="inputValor" class="col-sm-1 col-form-label">Valor</label>
     	<div class="col-sm-2">
-      		<input type="text" class="form-control" id="inputValor">
+      		<input type="text" class="form-control" id="valor" name="valor">
     	</div>
   	</div>
   	
   	<div class="row mb-3">
     	<label for="inputValor" class="col-sm-1 col-form-label">Status</label>
     	<div class="col-sm-2">
-      		<select class="form-control">
-      		<option>Pendente</option>
-      		<option>Recebido</option>
+      		<select class="form-control" name="status">
+      		<option value="PENDENTE">Pendente</option>
+      		<option value="RECEBIDO">Recebido</option>
       		</select>
     	</div>
   	</div>
