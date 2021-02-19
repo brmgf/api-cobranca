@@ -1,10 +1,16 @@
 package com.brmgf.cobranca.controller;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.brmgf.cobranca.model.StatusTitulo;
 import com.brmgf.cobranca.model.Titulo;
 import com.brmgf.cobranca.repository.Titulos;
 
@@ -16,14 +22,20 @@ public class TituloController {
 	private Titulos titulos;
 
 	@RequestMapping("/novo")
-	public String novo() {
-		//retorna a view
-		return "CadastroTitulo";
+	public ModelAndView novo() {
+		ModelAndView mv = new ModelAndView("CadastroTitulo");
+		return mv.addObject("todosStatusTitulo", StatusTitulo.values());
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String salvar(Titulo titulo) {
+	public ModelAndView salvar(Titulo titulo) {
 		titulos.save(titulo);
-		return "CadastroTitulo";
+		ModelAndView mv = new ModelAndView("CadastroTitulo");
+		return mv.addObject("mensagem", "Título salvo com sucesso!");
+	}
+	
+	@ModelAttribute("todosStatusTitulo")
+	public List<StatusTitulo> todosStatusTitulo() {
+		return Arrays.asList(StatusTitulo.values());
 	}
 }
